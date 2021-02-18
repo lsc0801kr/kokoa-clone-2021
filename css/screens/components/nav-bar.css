@@ -1,0 +1,95 @@
+.nav {
+  position: fixed; /*네비게이션 바를 고정되게 만들어 줬다.*/
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  /*박스의 크기를 테두리의 크기와 같게 해서 짤리는 부분이 없도록 하였다.
+  width: 100%를 했지만 padding의 좌우값을 50을 줘서 총 150이 되어서 오른쪽이 잘린다.
+  그래서 box-sizing: border-box썼는데 padding을 줘도 신경쓰지 말고 box사이즈를
+  늘리지 말라는 뜻이다.*/
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification {
+  position: absolute;
+  /*position: absolute가 오면 부모에 무조건 position: relative가 와야 한다.*/
+  left: 20px;
+  bottom: 17px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+.nav__dopt {
+  background-color: tomato;
+  width: 6px;
+  border-radius: 100px;
+  height: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /*position: absolute가 오면 부모에 무조건 position: relative가 와야 한다.*/
+  left: 32px;
+  bottom: 30px;
+}
+@keyframes apperBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.nav__btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: apperBtnAnimation 0.3s ease-in-out forwards;
+}
+.nav__btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.9s;
+}
+
+.nav__btn__fri {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: apperBtnAnimation 0.3s ease-in-out forwards;
+}
+.nav__btn__fri:nth-child(1) {
+  animation-delay: 2.4s;
+}
+.nav__btn__fri:nth-child(2) {
+  animation-delay: 2.7s;
+}
+.nav__btn__fri:nth-child(3) {
+  animation-delay: 3s;
+}
+.nav__btn__fri:last-child {
+  animation-delay: 3.3s;
+}

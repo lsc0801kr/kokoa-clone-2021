@@ -1,0 +1,61 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.7;
+}
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /*회색 밑줄 설정*/
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out; /*애니매이션을 넣어줌*/
+}
+/*=.login-form__input
+  =.login-form__btn/*/
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /*login 버튼을 눌러도 아래의 색이 변하지 않도록 설정함*/
+  transition: border-color 0.3s ease-in-out;
+  /*submit type이 아닐 때에만 위에의 조건이 성립된다는 뜻이다.*/
+}
+
+#login-form input::placeholder {
+  /*input 안에 있는 placeholder라는 뜻이다.*/
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+  /*키보드로 입력을 하고 있을 때 밑줄의 색이 바뀐다.*/
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer; /*마우스가 위로 올라가면 손 표시로 바뀐다.*/
+  padding: 20px;
+  border-radius: 5px;
+}
+/*=.login-form__a*/
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit; /*부모로 부터 색을 상속 받는 다는 뜻*/
+  font-size: 13px;
+}

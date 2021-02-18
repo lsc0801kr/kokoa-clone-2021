@@ -1,0 +1,30 @@
+.status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%; /*위에 줄은 status-bar를 위에 고정시키기 위한 것이다.*/
+  display: flex;
+  justify-content: center;
+  padding: 5px 3px;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.status-bar__column .fa-battery-full {
+  /*status-bar__column안에 fa-battery-full이라는 뜻이다.*/
+  margin: 0px 5px;
+}
+.something {
+  background-color: white;
+}

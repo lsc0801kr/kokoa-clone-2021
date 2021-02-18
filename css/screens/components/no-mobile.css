@@ -1,0 +1,19 @@
+#no-mobile {
+  position: absolute; /*부모의 위치를 기준으로 잡는다.*/
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  top: 0;
+}
+
+@media screen and (max-width: 645px) {
+  /*645보다 스크린이 작으면*/
+  #no-mobile {
+    display: none; /*no-mobile 스크린이 보이지 말라는 뜻이다.*/
+  }
+}
